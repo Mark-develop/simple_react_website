@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Outfit&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ffffff;
+    color: rgb(24, 24, 24);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.wrapper{
+    width: 1280px;
+    margin: 50px auto;
+}
+
+header{
+    position: relative;
+}
+
+header .logo{
+    font-weight: 600;
+    font-size: 1.3rem;
+    position: relative;
+    padding-left: 50px;
+}
+
+header .logo .logo-icon{
+    color: #397042;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0px;
+    top: -10px;
+}
+
+header ul.nav{
+    float: right;
+    list-style: none;
+}
+
+header ul.nav li{
+    display: inline;
+    font-weight: 400;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in;
+}
+
+header ul.nav li:hover{
+    opacity: 0.5;
+}
+
+header .shop-cart-button{
+    float: right;
+    cursor: pointer;
+    transition: color, transform 0.2s ease-in;
+    width: 22px;
+    height: 22px;
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active{
+    color: #397042;
+    transform: scale(1.15);
+}
+
+header .shop-cart{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    background: #eeeeee;
+    -webkit-box-shadow: 7px 4px 11px -10px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 7px 4px 11px -10px rgba(66, 68, 90, 1);
+    box-shadow: 7px 4px 11px -10px rgba(66, 68, 90, 1);
+    z-index: 1000;
+    padding: 15px;
+    padding-bottom: 0;
+}
+
+header .shop-cart .empty i{
+    margin-bottom: 15px;
+}
+
+header .shop-cart .item{
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+}
+
+header .shop-cart .item img{
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+}
+
+header .shop-cart .item h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+header .shop-cart .item b{
+    color: #797979;
+    font-weight: 600;
+}
+
+header .shop-cart .item .delete-button{
+    color: #f76767;
+    float: right;
+    cursor: pointer;
+    transition: color, transform 0.2s ease-in;
+}
+
+header .shop-cart .item .delete-button:hover{
+    color: #ec3030;
+    transform: scale(1.1);
+}
+
+.total{
+    float: left;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+header .presentation{
+    margin: 50px 0;
+    background: url('./img/garden-header.jpg') no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: #70ad80;
+    position: relative;
+}
+
+header .presentation::after{
+    content: 'Goods for garden, home, and farms';
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 300px;
+    font-size: 40px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+header .presentation::before{
+    content: 'at low prices';
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    width: 300px;
+    font-size: 25px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.categories div{
+    display: inline-block;
+    background: #eeeeee;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.15s ease-in;
+}
+
+.categories div:hover{
+    border-color: #cecece;
+    transform: scale(1.05)
+}
+
+.full-item{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    overflow: auto;
+}
+
+.full-item > div{
+    width: 400px;
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.full-item > div img{
+    border-radius: 15px;
+}
+.full-item .close-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+
+.full-item .close-button:hover{
+    color: #000000;
+    transform: scale(1.1);
+}
+
+main{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item{
+    width: 30%;
+    margin-bottom: 50px;
+    background: #eeeeee;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+main .item img,
+.full-item  img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform ease-in 0.2s;
+}
+
+main .item img{
+    cursor: pointer;
+}
+
+main .item img:hover,
+.full-item .item img:hover{
+    transform: scale(1.04);
+}
+
+main h2, .full-item h2,
+main p, .full-item p{
+    margin: 10px 20px;
+}
+
+main h2,
+.full-item h2{
+    font-size: 1.2rem;
+    padding-top: 10px;
+}
+
+main b{
+    color: #397042;
+    position: absolute;
+    bottom: 20px;
+    line-height: 35px;
+    left: 20px;
+    font-size: 1rem;
+}
+
+.full-item b{
+    color: #397042;
+    position: absolute;
+    bottom: 13px;
+    line-height: 35px;
+    left: 50px;
+    font-size: 1rem;
+}
+
+main .add-to-cart,
+.full-item .add-to-cart{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #ca5252;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color ease-in 0.2s;    
+    background-blend-mode: multiply;
+    
+}
+
+main .add-to-cart:hover,
+.full-item .add-to-cart:hover{
+    background-color: #f76767;
+}
+
+footer{
+    text-align: center;
+    margin-top: 100px;
+}
