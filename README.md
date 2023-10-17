@@ -13,5 +13,6 @@ You may also see any lint errors in the console.
 
 # or, you can lounch optimized version by:
 
+### `npm run build`
 ### `npm install -g serve`
 ### `serve -s build`
